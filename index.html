@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyBank SA - Digital Banking Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="C:\Users\itume\OneDrive\Documents\personal bankng dashboard\style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <i class="fas fa-university"></i>
+            <span>MyBank SA</span>
+        </div>
+        <div class="user-info">
+            <span>Welcome, Itumeleng Maharala</span>
+            <div class="user-avatar">TM</div>
+            <button class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="#"><i class="fas fa-wallet"></i> Accounts</a></li>
+                <li><a href="#"><i class="fas fa-exchange-alt"></i> Transactions</a></li>
+                <li><a href="#"><i class="fas fa-chart-pie"></i> Budget</a></li>
+                <li><a href="#"><i class="fas fa-credit-card"></i> Cards</a></li>
+                <li><a href="#"><i class="fas fa-paper-plane"></i> Transfer</a></li>
+                <li><a href="#"><i class="fas fa-mobile-alt"></i> Pay Bills</a></li>
+                <li><a href="#"><i class="fas fa-chart-line"></i> Reports</a></li>
+                <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <div class="dashboard-header">
+                <h1>Good Morning, Itumeleng!</h1>
+                <p>Today is Friday, 27 August 2025. Here's your financial summary.</p>
+            </div>
+
+            <section class="accounts-grid">
+                <div class="account-card checking">
+                    <div class="account-header">
+                        <div>
+                            <div class="account-type">Cheque Account</div>
+                            <div class="account-number">****-7831</div>
+                        </div>
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="account-balance">R 15,420.50</div>
+                    <div class="account-change">+R 1,200 this month</div>
+                </div>
+
+                <div class="account-card savings">
+                    <div class="account-header">
+                        <div>
+                            <div class="account-type">Savings Account</div>
+                            <div class="account-number">****-9245</div>
+                        </div>
+                        <i class="fas fa-piggy-bank"></i>
+                    </div>
+                    <div class="account-balance">R 45,800.00</div>
+                    <div class="account-change">+R 800 this month</div>
+                </div>
+
+                <div class="account-card credit">
+                    <div class="account-header">
+                        <div>
+                            <div class="account-type">Credit Card</div>
+                            <div class="account-number">****-3421</div>
+                        </div>
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <div class="account-balance">R 8,250.00</div>
+                    <div class="account-change">Available Credit</div>
+                </div>
+            </section>
+
+            <section class="quick-actions">
+                <h2>Quick Actions</h2>
+                <div class="actions-grid">
+                    <button class="action-btn" onclick="openModal('transferModal')">
+                        <i class="fas fa-exchange-alt"></i>
+                        <span>Transfer Money</span>
+                    </button>
+                    <button class="action-btn" onclick="openModal('billModal')">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                        <span>Pay Bills</span>
+                    </button>
+                    <button class="action-btn">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Buy Airtime</span>
+                    </button>
+                    <button class="action-btn">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>View Statement</span>
+                    </button>
+                    <button class="action-btn" onclick="openModal('transactionModal')">
+                        <i class="fas fa-plus"></i>
+                        <span>Add Transaction</span>
+                    </button>
+                    <button class="action-btn">
+                        <i class="fas fa-cog"></i>
+                        <span>Account Settings</span>
+                    </button>
+                </div>
+            </section>
+
+            <section class="transactions-section">
+                <div class="transactions-header">
+                    <h2>Recent Transactions</h2>
+                    <a href="#" class="view-all-btn">View All</a>
+                </div>
+                <div class="transactions-list">
+                    <div class="transaction-item">
+                        <div class="transaction-info">
+                            <div class="transaction-icon expense">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>Pick n Pay Mall of the North</h4>
+                                <span>26 Aug 2025, 14:32</span>
+                            </div>
+                        </div>
+                        <div class="transaction-amount expense">-R 850.75</div>
+                    </div>
+
+                    <div class="transaction-item">
+                        <div class="transaction-info">
+                            <div class="transaction-icon income">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>Salary - ABC Corporate</h4>
+                                <span>25 Aug 2025, 09:00</span>
+                            </div>
+                        </div>
+                        <div class="transaction-amount income">+R 28,500.00</div>
+                    </div>
+
+                    <div class="transaction-item">
+                        <div class="transaction-info">
+                            <div class="transaction-icon expense">
+                                <i class="fas fa-gas-pump"></i>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>Shell Garage - Fuel</h4>
+                                <span>24 Aug 2025, 16:45</span>
+                            </div>
+                        </div>
+                        <div class="transaction-amount expense">-R 680.00</div>
+                    </div>
+
+                    <div class="transaction-item">
+                        <div class="transaction-info">
+                            <div class="transaction-icon expense">
+                                <i class="fas fa-wifi"></i>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>Vodacom - Internet</h4>
+                                <span>23 Aug 2025, 08:15</span>
+                            </div>
+                        </div>
+                        <div class="transaction-amount expense">-R 599.00</div>
+                    </div>
+
+                    <div class="transaction-item">
+                        <div class="transaction-info">
+                            <div class="transaction-icon expense">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>Uber Eats - Nando's</h4>
+                                <span>22 Aug 2025, 19:30</span>
+                            </div>
+                        </div>
+                        <div class="transaction-amount expense">-R 185.50</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="transferModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Transfer Money</h2>
+                <span class="close" onclick="closeModal('transferModal')">&times;</span>
+            </div>
+            <form class="modal-form">
+                <div class="form-group">
+                    <label>From Account</label>
+                    <select class="form-input" name="fromAccount" required>
+                        <option value="Cheque Account (****-7831)">Cheque Account (****-7831)</option>
+                        <option value="Savings Account (****-9245)">Savings Account (****-9245)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>To Account</label>
+                    <input type="text" class="form-input" name="toAccount" placeholder="Account number or beneficiary" required>
+                </div>
+                <div class="form-group">
+                    <label>Amount (ZAR)</label>
+                    <input type="number" class="form-input" name="amount" placeholder="0.00" step="0.01" min="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label>Reference</label>
+                    <input type="text" class="form-input" name="reference" placeholder="Payment reference" required>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" onclick="closeModal('transferModal')">Cancel</button>
+                    <button type="submit" class="btn-primary">Transfer</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="billModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Pay Bills</h2>
+                <span class="close" onclick="closeModal('billModal')">&times;</span>
+            </div>
+            <form class="modal-form">
+                <div class="form-group">
+                    <label>Bill Type</label>
+                    <select class="form-input" name="billType" required>
+                        <option value="">Select Bill Type</option>
+                        <option value="Electricity - Eskom">Electricity - Eskom</option>
+                        <option value="Water - City of Tshwane">Water - City of Tshwane</option>
+                        <option value="Internet - Telkom">Internet - Telkom</option>
+                        <option value="Mobile - MTN">Mobile - MTN</option>
+                        <option value="Insurance - Discovery">Insurance - Discovery</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Account Number</label>
+                    <input type="text" class="form-input" name="accountNumber" placeholder="Bill account number" required>
+                </div>
+                <div class="form-group">
+                    <label>Amount (ZAR)</label>
+                    <input type="number" class="form-input" name="amount" placeholder="0.00" step="0.01" min="0.01" required>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" onclick="closeModal('billModal')">Cancel</button>
+                    <button type="submit" class="btn-primary">Pay Bill</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="transactionModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add Transaction</h2>
+                <span class="close" onclick="closeModal('transactionModal')">&times;</span>
+            </div>
+            <form class="modal-form">
+                <div class="form-group">
+                    <label>Transaction Type</label>
+                    <select class="form-input" name="type" required>
+                        <option value="">Select Type</option>
+                        <option value="expense">Expense</option>
+                        <option value="income">Income</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <input type="text" class="form-input" name="description" placeholder="Transaction description" required>
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <select class="form-input" name="category" required>
+                        <option value="">Select Category</option>
+                        <option value="Groceries">Groceries</option>
+                        <option value="Fuel">Fuel</option>
+                        <option value="Utilities">Utilities</option>
+                        <option value="Entertainment">Entertainment</option>
+                        <option value="Salary">Salary</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Amount (ZAR)</label>
+                    <input type="number" class="form-input" name="amount" placeholder="0.00" step="0.01" min="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label>Date</label>
+                    <input type="date" class="form-input" name="date" required>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" onclick="closeModal('transactionModal')">Cancel</button>
+                    <button type="submit" class="btn-primary">Add Transaction</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 MyBank SA. All rights reserved. | Developed by Itumeleng Maharala</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
