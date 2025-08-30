@@ -18,7 +18,7 @@ A modern, responsive web application for tracking personal finances. Built with 
 ## 🚀 Live Demo
 
 Experience the application live:  
-[View Live Dashboard](https://itufullstack.github.io/My-Personal-banking-app-dashboard/)
+[View Live Dashboard](https://itufullstack.github.io/My-Personal-banking-app-dashboard/index.html)
 
 ## 🛠️ Tech Stack
 
